@@ -1,0 +1,80 @@
+[
+  {
+    "bookId": "1",
+    "bookName": "The Alchemist",
+    "author": "Paulo Coelho",
+    "image": "https://m.media-amazon.com/images/I/71aFt4+OTOL._SL1500_.jpg",
+    "review": "A philosophical tale of a young shepherd's journey to discover his personal legend and the true meaning of life.",
+    "totalPages": 208,
+    "rating": 4.7,
+    "category": "Adventure",
+    "tags": ["Philosophical", "Spiritual", "Quest"],
+    "publisher": "HarperOne",
+    "yearOfPublishing": 1988
+  },
+  {
+    "bookId": "2",
+    "bookName": "Educated",
+    "author": "Tara Westover",
+    "image": "https://m.media-amazon.com/images/I/81WojUxbbFL._SL1500_.jpg",
+    "review": "A memoir about resilience and the transformative power of education, beautifully written and deeply moving.",
+    "totalPages": 352,
+    "rating": 4.8,
+    "category": "Memoir",
+    "tags": ["Inspiring", "Non-fiction", "Biography"],
+    "publisher": "Random House",
+    "yearOfPublishing": 2018
+  },
+  {
+    "bookId": "3",
+    "bookName": "The Midnight Library",
+    "author": "Matt Haig",
+    "image": "https://m.media-amazon.com/images/I/81WcnNQ-TBL._SL1500_.jpg",
+    "review": "A thought-provoking and uplifting novel about the choices we make and their impact on our lives.",
+    "totalPages": 304,
+    "rating": 4.2,
+    "category": "Fantasy",
+    "tags": ["Philosophical", "Fantasy", "Self-help"],
+    "publisher": "Viking",
+    "yearOfPublishing": 2020
+  },
+  {
+    "bookId": "4",
+    "bookName": "Atomic Habits",
+    "author": "James Clear",
+    "image": "https://m.media-amazon.com/images/I/91bYsX41DVL._SL1500_.jpg",
+    "review": "An excellent guide to building positive habits and breaking bad ones. Practical and scientifically backed advice.",
+    "totalPages": 320,
+    "rating": 4.7,
+    "category": "Self-help",
+    "tags": ["Motivational", "Non-fiction", "Productivity"],
+    "publisher": "Avery",
+    "yearOfPublishing": 2018
+  },
+  {
+    "bookId": "5",
+    "bookName": "Where the Crawdads Sing",
+    "author": "Delia Owens",
+    "image": "https://i.ibb.co.com/P90D2QY/henry-be-lc7xc-Web-ECc-unsplash.jpg",
+    "review": "A beautifully written novel with a compelling mystery at its heart, set in the captivating wilderness of North Carolina.",
+    "totalPages": 368,
+    "rating": 4.6,
+    "category": "Fiction",
+    "tags": ["Mystery", "Nature", "Romance"],
+    "publisher": "Putnam",
+    "yearOfPublishing": 2018
+  },
+  {
+    "bookId": "6",
+    "bookName": "Becoming",
+    "author": "Michelle Obama",
+    "image": "https://m.media-amazon.com/images/I/81h2gWPTYJL._SL1500_.jpg",
+    "review": "An intimate memoir by the former First Lady of the United States, offering insights into her life, values, and journey.",
+    "totalPages": 448,
+    "rating": 4.9,
+    "category": "Biography",
+    "tags": ["Inspirational", "Non-fiction", "Empowerment"],
+    "publisher": "Crown Publishing Group",
+    "yearOfPublishing": 2018
+  }
+]
