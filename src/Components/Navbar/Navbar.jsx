@@ -59,7 +59,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-[18.5px] md:font-bold md:text-[30px]">
+          <a className="btn btn-ghost text-[15px] md:font-bold md:text-[30px]">
             Book Vibe
           </a>
         </div>
