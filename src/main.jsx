@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
+import { ToastContainer } from "react-toastify";
 import Root from "./Components/Root/Root";
 import Home from "./Components/Home/Home";
 import Listedbooks from "./Components/Listedbooks/Listedbooks";
@@ -37,6 +38,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <ToastContainer></ToastContainer>
     <RouterProvider router={router} />
   </StrictMode>
 );

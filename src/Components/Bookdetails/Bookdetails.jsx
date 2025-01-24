@@ -1,10 +1,12 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { addreadid, addwishid } from "../localstorage1";
 
 const Bookdetails = () => {
   const bookdata = useLoaderData();
   const { bookIdx } = useParams();
   const desiredbookobj = bookdata.find((book) => book.bookId === bookIdx);
   const {
+    bookId,
     image,
     bookName,
     author,
@@ -16,8 +18,17 @@ const Bookdetails = () => {
     yearOfPublishing,
     rating,
   } = desiredbookobj;
+
+  const handlebooklist = () => {
+    addreadid(bookId);
+  };
+
+  const handlewishlist = () => {
+    addwishid(bookId);
+  };
+
   return (
-    <div className="max-w-7xl mx-auto mt-3">
+    <div className="max-w-7xl mx-auto mt-3 mb-8">
       <div className="card grid grid-cols-1 lg:grid-cols-2 gap-6 p-5 border-2 border-slate-200 shadow-xl mx-2">
         <div className="w-full">
           <figure>
@@ -82,10 +93,16 @@ const Bookdetails = () => {
               </span>
             </p>
             <div className="flex mt-4">
-              <button className="bg-slate-200 py-2 px-3 rounded-lg font-extrabold">
+              <button
+                onClick={handlebooklist}
+                className="bg-slate-200 py-2 px-3 rounded-lg font-extrabold"
+              >
                 Read
               </button>
-              <button className="bg-[#50B1C9] text-white py-2 px-3 rounded-lg ml-3 font-extrabold">
+              <button
+                onClick={handlewishlist}
+                className="bg-[#50B1C9] text-white py-2 px-3 rounded-lg ml-3 font-extrabold"
+              >
                 Wishlist
               </button>
             </div>

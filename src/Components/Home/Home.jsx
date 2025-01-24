@@ -8,7 +8,7 @@ const Home = () => {
     navigate("/listedbooks");
   };
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto mb-8">
       <div className="bg-slate-100 py-6 px-4 md:px-6 rounded-3xl mt-3 md:mt-2 mx-2">
         <section className="flex flex-col md:flex-row justify-between items-center md:items-start space-y-6 md:space-y-0">
           <div className="text-center md:text-left md:pr-4 lg:pr-8 xl:pr-12 lg:mt-5">
