@@ -2,12 +2,14 @@ import PropTypes from "prop-types";
 import { IoLocationOutline } from "react-icons/io5";
 import { SlPeople } from "react-icons/sl";
 import { RiPagesLine } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 
 const Wishlist = ({ bookid, bookdata }) => {
   const desiredwishbook = bookdata.find(
     (eachbook) => eachbook.bookId === bookid
   );
   const {
+    bookId,
     image,
     bookName,
     author,
@@ -18,6 +20,11 @@ const Wishlist = ({ bookid, bookdata }) => {
     yearOfPublishing,
     rating,
   } = desiredwishbook;
+
+  const navigate = useNavigate();
+  const viewbookdetailshandling = () => {
+    navigate(`/wish_read/${bookId}`);
+  };
   return (
     <div className="max-w-full mx-auto px-1 lg:px-3">
       <div className="card flex flex-col lg:flex-row bg-base-100 shadow-xl border-2 border-slate-200 mb-4 overflow-hidden">
@@ -77,7 +84,10 @@ const Wishlist = ({ bookid, bookdata }) => {
             <button className="text-[#FFAC33] bg-[#FFAC3324] px-3 py-1 rounded-3xl mr-2 text-sm sm:text-base">
               Rating : {rating}
             </button>
-            <button className="bg-[#23BE0A] text-white px-3 py-1 rounded-3xl text-sm sm:text-base">
+            <button
+              onClick={viewbookdetailshandling}
+              className="bg-[#23BE0A] text-white px-3 py-1 rounded-3xl text-sm sm:text-base"
+            >
               View Details
             </button>
           </div>
