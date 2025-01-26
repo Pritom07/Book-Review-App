@@ -61,7 +61,11 @@ const addreadid = (bookid) => {
     setread(readlist);
     toast.success("Book added successfully in the Readlist");
     return;
+  } else {
+    toast.warn(
+      `The book is already present in Readlist.A book cann't be added multiple time in Readlist`
+    );
   }
 };
 
-export { addwishid, addreadid };
+export { addwishid, addreadid, getread, getwish };
