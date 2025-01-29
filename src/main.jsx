@@ -8,11 +8,13 @@ import Home from "./Components/Home/Home";
 import Listedbooks from "./Components/Listedbooks/Listedbooks";
 import PagestoRead from "./Components/PagestoRead/PagestoRead";
 import Bookdetails from "./Components/Bookdetails/Bookdetails";
+import ErrorPage from "./Components/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
