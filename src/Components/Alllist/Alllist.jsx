@@ -5,6 +5,7 @@ import { getread, getwish } from "../localstorage1";
 import Readlist from "../Readlist/Readlist";
 import PropTypes from "prop-types";
 import Wishlist from "../Wishlist/Wishlist";
+import sortedarray from "../Sortingmanager";
 
 const Alllist = ({ bookdata }) => {
   const [readlist, setreadlist] = useState([]);
@@ -19,35 +20,31 @@ const Alllist = ({ bookdata }) => {
     setwishlist(getwishlist);
   }, []);
 
-  const bookratings = [];
-  const bookpages = [];
-  const bookpublishyear = [];
+  // const bookratings = [];
+  // const bookpages = [];
+  // const bookpublishyear = [];
 
-  for (const bookid of readlist) {
-    const readbookobj = bookdata.find((book) => book.bookId === bookid);
-    bookratings.push(readbookobj.rating);
-    bookpages.push(readbookobj.totalPages);
-    bookpublishyear.push(readbookobj.yearOfPublishing);
-  }
-  // console.log(bookratings);
+  // for (const bookid of readlist) {
+  //   const readbookobj = bookdata.find((book) => book.bookId === bookid);
+  //   bookratings.push(readbookobj.rating);
+  //   bookpages.push(readbookobj.totalPages);
+  //   bookpublishyear.push(readbookobj.yearOfPublishing);
+  // }
 
-  const handlesorting = (string) => {
-    if (string === "rating") {
-      bookratings.sort((a, b) => a - b);
-      const newratingarray = [];
-      for (const ratings of bookratings) {
-        for (const readbookid of readlist) {
-          const searchbookobject = bookdata.find(
-            (book) => book.bookId === readbookid
-          );
-          const searchbookrating = searchbookobject.rating;
-          if (ratings === searchbookrating) {
-            newratingarray.push(searchbookobject.bookId);
-          }
-        }
-      }
-      setreadlist(newratingarray);
+  const handlesorting = (criteria) => {
+    let sortIndex;
+    if (criteria === "rating") {
+      sortIndex = 1;
+    } else if (criteria === "totalPages") {
+      sortIndex = 2;
+    } else if (criteria === "yearOfPublishing") {
+      sortIndex = 3;
     }
+
+    const sortedReadlist = sortedarray(sortIndex, readlist, bookdata);
+    const sortedWritelist = sortedarray(sortIndex, wishlist, bookdata);
+    setreadlist(sortedReadlist);
+    setwishlist(sortedWritelist);
   };
 
   return (
@@ -70,12 +67,12 @@ const Alllist = ({ bookdata }) => {
               <button onClick={() => handlesorting("rating")}>Rating</button>
             </li>
             <li>
-              <button onClick={() => handlesorting("pages")}>
+              <button onClick={() => handlesorting("totalPages")}>
                 Number of pages
               </button>
             </li>
             <li>
-              <button onClick={() => handlesorting("publishyear")}>
+              <button onClick={() => handlesorting("yearOfPublishing")}>
                 Publisher year
               </button>
             </li>
