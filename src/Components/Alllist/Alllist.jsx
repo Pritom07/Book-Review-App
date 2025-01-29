@@ -20,17 +20,6 @@ const Alllist = ({ bookdata }) => {
     setwishlist(getwishlist);
   }, []);
 
-  // const bookratings = [];
-  // const bookpages = [];
-  // const bookpublishyear = [];
-
-  // for (const bookid of readlist) {
-  //   const readbookobj = bookdata.find((book) => book.bookId === bookid);
-  //   bookratings.push(readbookobj.rating);
-  //   bookpages.push(readbookobj.totalPages);
-  //   bookpublishyear.push(readbookobj.yearOfPublishing);
-  // }
-
   const handlesorting = (criteria) => {
     let sortIndex;
     if (criteria === "rating") {
