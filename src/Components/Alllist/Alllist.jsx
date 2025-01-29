@@ -83,13 +83,21 @@ const Alllist = ({ bookdata }) => {
           className="tab-content bg-base-100 border-base-300 rounded-box p-6"
         >
           <div>
-            {readlist.map((bookid, idx) => (
-              <Readlist
-                key={idx}
-                bookid={bookid}
-                bookdata={bookdata}
-              ></Readlist>
-            ))}
+            {readlist.length === 0 ? (
+              <div className="flex justify-center items-center">
+                <img src="images/nodata.jpg" className="w-96"></img>
+              </div>
+            ) : (
+              <div>
+                {readlist.map((bookid, idx) => (
+                  <Readlist
+                    key={idx}
+                    bookid={bookid}
+                    bookdata={bookdata}
+                  ></Readlist>
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
@@ -105,13 +113,21 @@ const Alllist = ({ bookdata }) => {
           className="tab-content bg-base-100 border-base-300 rounded-box p-6"
         >
           <div>
-            {wishlist.map((bookid, idx) => (
-              <Wishlist
-                key={idx}
-                bookid={bookid}
-                bookdata={bookdata}
-              ></Wishlist>
-            ))}
+            {wishlist.length === 0 ? (
+              <div className="flex justify-center items-center">
+                <img src="images/nodata.jpg" className="w-96"></img>
+              </div>
+            ) : (
+              <div>
+                {wishlist.map((bookid, idx) => (
+                  <Wishlist
+                    key={idx}
+                    bookid={bookid}
+                    bookdata={bookdata}
+                  ></Wishlist>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
