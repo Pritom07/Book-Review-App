@@ -69,7 +69,10 @@ const Alllist = ({ bookdata }) => {
         </div>
       </div>
 
-      <div role="tablist" className="tabs tabs-lifted px-2md:px-0 mb-6">
+      <div
+        role="tablist"
+        className="tabs tabs-lifted px-2md:px-0 mb-6 mt-4 md:mt-0"
+      >
         <input
           type="radio"
           name="my_tabs_2"
