@@ -9,6 +9,7 @@ import Listedbooks from "./Components/Listedbooks/Listedbooks";
 import PagestoRead from "./Components/PagestoRead/PagestoRead";
 import Bookdetails from "./Components/Bookdetails/Bookdetails";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
+import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter([
   {
@@ -47,7 +48,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <ToastContainer autoClose={3000}></ToastContainer>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <ToastContainer autoClose={3000}></ToastContainer>
+      <RouterProvider router={router} />
+    </HelmetProvider>
   </StrictMode>
 );

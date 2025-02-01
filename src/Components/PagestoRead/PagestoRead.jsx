@@ -10,6 +10,7 @@ import {
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts";
+import { Helmet } from "react-helmet-async";
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 const getPath = (x, y, width, height) => {
@@ -47,6 +48,9 @@ const PagestoRead = () => {
 
   return (
     <div className="flex justify-center min-h-screen px-4 mt-4 md:mt-2">
+      <Helmet>
+        <title>Pages to Read</title>
+      </Helmet>
       <div className="w-full max-w-7xl">
         <h2 className="text-center text-xl md:text-2xl font-bold mb-4 text-gray-800">
           Pages to Read Per Book

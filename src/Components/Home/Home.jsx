@@ -2,6 +2,7 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import Eachbook from "../Eachbook/Eachbook";
 import { useEffect, useState } from "react";
 import { PropagateLoader } from "react-spinners";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const bookdata = useLoaderData();
@@ -20,10 +21,16 @@ const Home = () => {
     <div>
       {spinner ? (
         <div className="flex justify-center items-center min-h-screen">
+          <Helmet>
+            <title>Book-Review-App | Home</title>
+          </Helmet>
           <PropagateLoader color="#23BE0A" size={22} />
         </div>
       ) : (
         <div className="max-w-7xl mx-auto mb-8">
+          <Helmet>
+            <title>Book-Review-App | Home</title>
+          </Helmet>
           <div className="bg-slate-100 py-6 px-4 md:px-6 rounded-3xl mt-3 md:mt-2 mx-2">
             <section className="flex flex-col md:flex-row justify-between items-center md:items-start space-y-6 md:space-y-0">
               <div className="text-center md:text-left md:pr-4 lg:pr-8 xl:pr-12 lg:mt-5">
